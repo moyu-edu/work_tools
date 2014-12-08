@@ -23,7 +23,7 @@ $template = <<<EOF
           <Directory /Users/ericzheng/jumei/eric_&/jumei_static_files>
               Allow from all
           </Directory>
- </VirtualHost>
+ </VirtualHost>ssh-keygen -t rsa -C "your_email@example.com"
 EOF;
 
 $patterns = array();
