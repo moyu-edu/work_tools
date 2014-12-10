@@ -8,7 +8,12 @@ class FileDb extends Component {
     private $_fp;
     protected function init() {
         $this->_filePath = DB_FILE;
-        $this->_fp = fopen($this->_filePath, 'a+');
+        try{
+            $this->_fp = fopen($this->_filePath, 'a+');
+        }catch (\Exception $e){
+            echo '错误代码是'.$e->getCode().'错误行数是'.$e->getLine();
+        }
+
     }
 
     public function __destruct() {
