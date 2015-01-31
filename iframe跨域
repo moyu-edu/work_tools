@@ -1,0 +1,16 @@
+父页面
+  document.domain = "demo.com";
+  var a = 123;
+  //alert(window.frames["abc"].window.b);
+  window.onload = function(){  
+	console.log(window.frames["abc"].b);
+  }
+
+
+子页面
+
+<script>
+document.domain = "demo.com";
+alert(parent.a);
+var  b = 234;
+</script>
