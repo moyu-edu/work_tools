@@ -1,0 +1,18 @@
+//实现多继承
+function multiInherit(){
+  var tempObj = [];	
+  var args = Array.prototype.slice.call(arguments);
+  var len = args.length;
+  for(var i=1;i<len;i++){
+		tempObj[i].push(new args[i]);
+  }
+  var tempObj1 = {};
+  for(var j=0;j<len;j++){
+	  for(var k in tempObj[i]){
+		  tempObj1[k] = tempObj[i][k];
+	  }
+  }
+  return tempObj1;  
+}
+
+var a = multiInherit(A,B);
